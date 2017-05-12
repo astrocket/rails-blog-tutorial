@@ -13,3 +13,13 @@
  *= require_tree .
  *= require_self
  */
+
+.container {
+    margin-top: 20px;
+}
+
+@media (min-width: 576px) {
+    .container {
+        margin-top: 50px
+    }
+}

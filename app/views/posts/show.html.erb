@@ -1,0 +1,9 @@
+<div class="card">
+  <div class="card-block">
+    <h4 class="card-title"><%= @post.title %></h4>
+    <h6 class="card-subtitle mb-2 text-muted"><%= @post.created_at %></h6>
+    <p class="card-text"><%= @post.content %></p>
+    <%= link_to '편집', edit_post_path(@post) %>
+    <%= link_to '삭제', post_path(@post), method: :delete %>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<% @posts.each do |post| %>
+        <%= link_to post do %>
+            <div class="card">
+              <div class="card-block">
+                <h4 class="card-title"><%= post.title %></h4>
+                <h6 class="card-subtitle mb-2 text-muted"><%= post.created_at %></h6>
+                <p class="card-text"><%= post.content %></p>
+              </div>
+            </div>
+        <% end %>
+<% end %>
+<%= will_paginate @posts %>
+<% if user_signed_in? and current_user.has_role?(:admin) %>
+    <%= link_to '새글쓰기', new_post_path %>
+<% end %>
